@@ -52,12 +52,3 @@ Docker é uma solução que consegue integrar namespace, cgroups e file system, 
 	* Programa que faz chamadas na API do docker host para criar containers.
 	* Faz pull, push e roda imagems.
 
-
-
-### Principais Comandos
-
-- docker ps -> listar os containers que estão rodando na máquina. Uma variação é utilizar o docker ps *-a* que faz aparecer também os container que estão parados no momento.
-- docker run image -> roda o container com a imagem escolhida. Ex.: docker run *hello-world*, docker run *ubuntu*, docker run *nginx*
-
-
-
