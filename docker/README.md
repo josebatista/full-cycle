@@ -42,14 +42,14 @@ As imagens ficam armazenadas dentro de um local denominado *Image Registry*.
 Docker é uma solução que consegue integrar namespace, cgroups e file system, denominado Docker Host.
 
 - **Docker host**: 
-	-- é um processo (deamon) que disponibiliza uma API que fica rodando no computador host. 
-	-- Também é composto por um cache para armazenar as imagens utilizadas (baixadas do Image Registry).
-	-- Realiza o gerenciamento de volumes (compartilhamento de volume para persistencia de dados).
-	-- Realiza o gerenciamento da comunicação entre containers utilizando o conceito de Networks.
+	* é um processo (deamon) que disponibiliza uma API que fica rodando no computador host. 
+	* Também é composto por um cache para armazenar as imagens utilizadas (baixadas do Image Registry).
+	* Realiza o gerenciamento de volumes (compartilhamento de volume para persistencia de dados).
+	* Realiza o gerenciamento da comunicação entre containers utilizando o conceito de Networks.
 
 - **Docker client**: 
-	-- Programa que faz chamadas na API do docker host para criar containers.
-	-- Faz pull, push e roda imagems.
+	* Programa que faz chamadas na API do docker host para criar containers.
+	* Faz pull, push e roda imagems.
 
 
 
