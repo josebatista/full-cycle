@@ -26,8 +26,9 @@ Isola os recursos computacionais para não inteferir nos outros processos na maq
 
 ## Imagens
 
-Dockerfile - Cria as imagens/containers de forma declarativa.
-	   - Através do Dockerfile é possível geara uma imagem (processo de build).
+- Dockerfile 
+	* Cria as imagens/containers de forma declarativa.
+	* Através do Dockerfile é possível geara uma imagem (processo de build).
 
 Uma imagem tem um estado imutável, ou seja, essa imagem não é alterada de forma alguma.
 Possui uma camada de *read*/*write*, que permite criar e ler arquivos no container, porém, ao finalizar o processo esses dados são perdidos.
