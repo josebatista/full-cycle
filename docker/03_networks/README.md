@@ -35,7 +35,7 @@ O mais comum é utilizar *bridge* e em algum casos específicos o *host*.
 
 
 ### Conectando container na rede
-- **docker network connect networkName containerName/containerId
+- **docker network connect networkName containerName/containerId**
 > Ex.: docker network connect minharede ubuntu3
 
 
