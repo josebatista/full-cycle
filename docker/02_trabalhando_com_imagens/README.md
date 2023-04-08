@@ -6,23 +6,25 @@ Imagens a grosso modo são uma espécie de template de container que será gerad
 ## Docker HUB
 O Dockerhub é um repositório onde você pode disponibilizar suas imagems, de forma pública ou privada. Ao utilizar uma imagem do NGINX por exemplo, estamos utilizando uma imagem que foi enviada para o DockerHub. Resumindo é um local onde as imagens docker são armazenadas e disponibilizadas para uso.
 Para que a publicação seja possível, você primeiramente você terá que realizar o login em sua conta digitando:
-- **docker login**
+`docker login`
+
 
 Realizado o login basta realizar o push de sua imagem:
-- **docker push <nome da imagem>**
+`docker push <nome da imagem>`
+
 
 Para realizar o download de qualquer imagem do DockerHub pode ser realizado utilizando o comando abaixo:
-- **docker pull <nome da imagem:tag>**
+`docker pull <nome da imagem:tag>`
 
 
 ### Listando imagens
-- **docker images**
+`docker images`
 
 ### Remover uma imagem
-- **docker rmi *<nome da imagem>***
+`docker rmi <nome da imagem>`
 
 ### Remover todas as imagens
-- **docker rmi $(docker images -q) -f**
+`docker rmi $(docker images -q) -f`
 
 
 
@@ -50,11 +52,13 @@ ENTRYPOINT ["./main"]
 
 Após a criação do arquivo do Dockerfile, você poderá criar sua própria imagem que poderá ser publicada no DockerHub
 
-- **docker build -t <seu-user>/<nome-da-imagem>:<versao-da-imagem> <diretorio-do-dockerfile>**
+`docker build -t <seu-user>/<nome-da-imagem>:<versao-da-imagem> <diretorio-do-dockerfile>`
 > Ex.: docker build -t pereiraze/teste-image:latest .
 
+
 Você pode especificar o nome do Dockerfile através do comando
-- **docker build -t <seu-user>/<nome-da-imagem>:<versao-da-imagem> <diretorio-do-dockerfile> *-f <nome-do-arquivo>***
+
+`docker build -t <seu-user>/<nome-da-imagem>:<versao-da-imagem> <diretorio-do-dockerfile> -f <nome-do-arquivo>`
 > Ex.: docker build -t pereiraze/teste-image:latest . -f Dockerfile.prod
 
 
