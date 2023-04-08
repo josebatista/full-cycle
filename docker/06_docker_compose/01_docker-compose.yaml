@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  laravel:
+    image: pereiraze/laravel:prod
+    container_name: laravel
+    networks:
+      - laraNet
+
+  nginx:
+    image: pereiraze/nginx:prod
+    container_name: nginx
+    networks:
+      - laraNet
+    ports:
+      - "8080:80"
+
+networks:
+  laraNet:
+    driver: bridge
