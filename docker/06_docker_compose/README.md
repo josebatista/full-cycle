@@ -17,4 +17,5 @@
 ## Rodando o container do nginx
 > docker run -d --network laraNet --name nginx -p 8000:80 pereiraze/nginx:prod
 
-
+## Realizando o build e executando os containers utilizando o docker-compose
+> docker-compose -f 04_docker-compose_node_wait.yaml up -d --build
