@@ -5,15 +5,19 @@ Imagens a grosso modo são uma espécie de template de container que será gerad
 
 ## Docker HUB
 O Dockerhub é um repositório onde você pode disponibilizar suas imagems, de forma pública ou privada. Ao utilizar uma imagem do NGINX por exemplo, estamos utilizando uma imagem que foi enviada para o DockerHub. Resumindo é um local onde as imagens docker são armazenadas e disponibilizadas para uso.
+
 Para que a publicação seja possível, você primeiramente você terá que realizar o login em sua conta digitando:
+
 `docker login`
 
 
 Realizado o login basta realizar o push de sua imagem:
+
 `docker push <nome da imagem>`
 
 
 Para realizar o download de qualquer imagem do DockerHub pode ser realizado utilizando o comando abaixo:
+
 `docker pull <nome da imagem:tag>`
 
 
