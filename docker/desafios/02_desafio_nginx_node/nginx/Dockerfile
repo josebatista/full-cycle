@@ -10,5 +10,3 @@ RUN apk update && \
     chmod +x /usr/bin/wait-for
 
 
-RUN mkdir /var/www/html -p && \
-    > /var/www/html/index.php
