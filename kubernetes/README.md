@@ -56,3 +56,10 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 - Removendo clusters utilizando o kind
 > kind delete clusters [name]
 
+- Criando clusters utilizando arquivo de configuração
+> kind create cluster --config=[file] --name=[cluterName]
+	- > kind create cluster --config=k8s/kind.yaml --name=fullcycle
+
+
+
+
