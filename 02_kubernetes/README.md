@@ -81,11 +81,16 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 `kubectl port-forward pod/goserver 8080:80`
 
 
-- Criar Pods baseado em um arquivo de configuração
+- Criar Pods/ReplicaSet/Deployment baseado em um arquivo de configuração
 
 > kubectl apply -f [fileName]
 
 `kubectl apply -f k8s/pod.yaml`
+
+
+- Listando Pods
+
+> kubectl get po
 
 
 - Deletando um Pod
@@ -94,6 +99,50 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 
 `kubectl delete pod go-server`
 
+
+- Listando ReplicaSet
+
+> kubectl get rs
+
+
+- Deletando ReplicaSet
+
+> kubectl delete rs [replicaSetName]
+
+`kubectl delete rs go-server`
+
+
+- Listando Deployments
+
+> kubectl get deployments
+
+
+- Deletando Deployment
+
+> kubectl delete deployment [deploymentName]
+
+`kubectl delete deployment go-server`
+
+
+- Historico de Deployments
+
+> kubectl rollout history deployment [deploymentName]
+
+`kubectl rollout history deployment go-server`
+
+
+- Voltando versão anterior do deploymento
+
+> kubectl rollout undo deployment [deploymentName] --to-revision=[revisionNumber]
+
+`kubectl rollout undo deployment go-server --to-revision=2`
+
+
+- Lendo informações dos Deployments/ReplicaSet/Pod
+
+> kubectl describe [deployment|replicaset|pod] [name]
+
+`kubectl describe deployment go-server`
 
 
 
