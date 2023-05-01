@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-server-service
+spec:
+  selector:
+    app: go-server # este name sera o mesmo informado no selector.matchLabels do deployment
+  type: LoadBalancer
+  ports:
+    - name: go-server-port
+      port: 8080 # porta de acesso ao meu service
+      targetPort: 80 # porta do container (se nao informado assume o mesmo valor de port)
+      protocol: TCP
+
+
