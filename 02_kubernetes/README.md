@@ -62,5 +62,18 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 `kind create cluster --config=k8s/kind.yaml --name=fullcycle`
 
 
+- Listando os clusters ja configurados
+
+> kubectl config get-clusters
+
+
+- Alterando a configuração do kubectl para outro contexto (servidor)
+
+> kubectl config use-context [kubernetesContextName]
+
+
+
+
+
 
 
