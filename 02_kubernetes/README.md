@@ -164,11 +164,13 @@ O Service é a porta de entrada de uma aplicação. Ele recebe a requisição e 
 - **ExternalName**: Mapeia o serviço para o conteúdo do campo externalName (por exemplo, foo.bar.example.com), retornando um registro CNAME com seu valor. Nenhum tipo de proxy é configurado.
 
 
-### port vs targetPort
+`No NodePort podemos atribuir uma porta no range 30000-32767`
+
+### port VS targetPort
 - **PORT**: Porta de acesso ao meu service.
 - **targetPort**: Porta de acesso do meu container/Pod
 
-
+`Se não informar targetPort será assumido o mesmo valor que o Port`
 
 
 
