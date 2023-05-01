@@ -62,6 +62,8 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 `kind create cluster --config=k8s/kind.yaml --name=fullcycle`
 
 
+### Comando kubectl
+
 - Listando os clusters ja configurados
 
 > kubectl config get-clusters
@@ -72,6 +74,25 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 > kubectl config use-context [kubernetesContextName]
 
 
+- Direcionar porta do pod para validar se o pod esta funcionando corretamente no kubernetes
+
+> kubectl port-forward pod/[podName] [localPort]:[podPort]
+
+`kubectl port-forward pod/goserver 8080:80
+
+
+- Criar Pods baseado em um arquivo de configuração
+
+> kubectl apply -f=[fileName]
+
+`kubectl apply -f=k8s/pod.yaml`
+
+
+- Deletando um Pod
+
+> kubectl delete pod [podName]
+
+`kubectl delete pod go-server`
 
 
 
