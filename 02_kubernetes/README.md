@@ -62,7 +62,7 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 `kind create cluster --config=k8s/kind.yaml --name=fullcycle`
 
 
-### Comando kubectl
+## Comando kubectl
 
 - Listando os clusters ja configurados
 
@@ -74,11 +74,12 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 > kubectl config use-context [kubernetesContextName]
 
 
-- Direcionar porta do pod para validar se o pod esta funcionando corretamente no kubernetes
+- Direcionar porta no kubernetes para validar se esta funcionando corretamente no kubernetes
 
-> kubectl port-forward pod/[podName] [localPort]:[podPort]
+> kubectl port-forward [k8sType]/[podName] [localPort]:[podPort]
 
 `kubectl port-forward pod/goserver 8080:80`
+`kubectl port-forward svc/goserver-service 8080:80`
 
 
 - Criar Pods/ReplicaSet/Deployment baseado em um arquivo de configuração
@@ -145,5 +146,20 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 `kubectl describe deployment go-server`
 
 
+## Services
+Ter uma aplicação rodando no kubernetes não significa que ela pode ser acessada. Para dar acesso a aplicação será necessário a criação de um *Service*.
+
+O Service é a porta de entrada de uma aplicação. Ele recebe a requisição e encaminha para a aplicação (uma espécie de LoadBalancer).
+
+### Tipos de serviço
+
+- **ClusterIP**: Expõe o serviço em um IP interno do cluster. A escolha desse valor torna o serviço acessível apenas de dentro do cluster. Esse é o padrão usado se você não especificar explicitamente um tipo para um serviço.
+- **NodePort**: Expõe o Serviço no IP de cada Node em uma porta estática (o NodePort). Para disponibilizar a porta do nó, o Kubernetes configura um endereço IP de cluster, como se você tivesse solicitado um Serviço do tipo: ClusterIP.
+- **LoadBalancer**: Expõe o serviço externamente usando o balanceador de carga de um provedor de nuvem.
+- **ExternalName**: Mapeia o serviço para o conteúdo do campo externalName (por exemplo, foo.bar.example.com), retornando um registro CNAME com seu valor. Nenhum tipo de proxy é configurado.
+
+
+- Listando os service criados
+> kubectl get svc
 
 
