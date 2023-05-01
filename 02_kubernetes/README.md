@@ -151,6 +151,11 @@ Ter uma aplicação rodando no kubernetes não significa que ela pode ser acessa
 
 O Service é a porta de entrada de uma aplicação. Ele recebe a requisição e encaminha para a aplicação (uma espécie de LoadBalancer).
 
+
+- Listando os service criados
+> kubectl get svc
+
+
 ### Tipos de serviço
 
 - **ClusterIP**: Expõe o serviço em um IP interno do cluster. A escolha desse valor torna o serviço acessível apenas de dentro do cluster. Esse é o padrão usado se você não especificar explicitamente um tipo para um serviço.
@@ -159,7 +164,5 @@ O Service é a porta de entrada de uma aplicação. Ele recebe a requisição e 
 - **ExternalName**: Mapeia o serviço para o conteúdo do campo externalName (por exemplo, foo.bar.example.com), retornando um registro CNAME com seu valor. Nenhum tipo de proxy é configurado.
 
 
-- Listando os service criados
-> kubectl get svc
 
 
