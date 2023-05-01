@@ -152,7 +152,7 @@ Ter uma aplicação rodando no kubernetes não significa que ela pode ser acessa
 O Service é a porta de entrada de uma aplicação. Ele recebe a requisição e encaminha para a aplicação (uma espécie de LoadBalancer).
 
 
-- Listando os service criados
+- Listando os services criados
 > kubectl get svc
 
 
@@ -162,6 +162,15 @@ O Service é a porta de entrada de uma aplicação. Ele recebe a requisição e 
 - **NodePort**: Expõe o Serviço no IP de cada Node em uma porta estática (o NodePort). Para disponibilizar a porta do nó, o Kubernetes configura um endereço IP de cluster, como se você tivesse solicitado um Serviço do tipo: ClusterIP.
 - **LoadBalancer**: Expõe o serviço externamente usando o balanceador de carga de um provedor de nuvem.
 - **ExternalName**: Mapeia o serviço para o conteúdo do campo externalName (por exemplo, foo.bar.example.com), retornando um registro CNAME com seu valor. Nenhum tipo de proxy é configurado.
+
+
+### port vs targetPort
+- **PORT**: Porta de acesso ao meu service.
+- **targetPort**: Porta de acesso do meu container/Pod
+
+
+
+
 
 
 
