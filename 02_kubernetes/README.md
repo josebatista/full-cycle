@@ -78,7 +78,7 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 
 > kubectl port-forward pod/[podName] [localPort]:[podPort]
 
-`kubectl port-forward pod/goserver 8080:80
+`kubectl port-forward pod/goserver 8080:80`
 
 
 - Criar Pods baseado em um arquivo de configuração
