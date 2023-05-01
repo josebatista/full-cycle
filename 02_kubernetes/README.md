@@ -83,9 +83,9 @@ Também existe o Minikube, porém essa ferramenta utiliza uma VM e não Docker.
 
 - Criar Pods baseado em um arquivo de configuração
 
-> kubectl apply -f=[fileName]
+> kubectl apply -f [fileName]
 
-`kubectl apply -f=k8s/pod.yaml`
+`kubectl apply -f k8s/pod.yaml`
 
 
 - Deletando um Pod
